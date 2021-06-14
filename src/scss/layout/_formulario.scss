@@ -1,0 +1,39 @@
+@use "sass:math";
+.formulario {
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    label {
+        flex: 0 0 10rem;
+        color: $azul;
+        font-weight: $bold;
+    }
+
+    input {
+        flex: 1;
+        border-radius: .5rem;
+        padding: math.div($separacion, 4);
+        border: none;
+        background-color: $fondoui;
+        color: $blanco;
+    }
+}
+
+.alerta {
+    padding: 2.5rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: $bold;
+    display: block;
+    width: 100%;
+
+    &.error {
+        background-color: darken(red, 15);
+        border-radius: .5rem;
+    }
+}
